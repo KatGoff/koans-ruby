@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="798754f6-bb95-4c6d-afad-f06a071ce051" name="Default Changelist" comment="" />
+    <list default="true" id="798754f6-bb95-4c6d-afad-f06a071ce051" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.path_progress" beforeDir="false" afterPath="$PROJECT_DIR$/.path_progress" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about_scoring_project.rb" beforeDir="false" afterPath="$PROJECT_DIR$/about_scoring_project.rb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1WKht2g8l5aHxKiI7MKg1HQ8qyJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,6 +24,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -43,7 +53,7 @@
       <updated>1578904404862</updated>
       <workItem from="1578904406458" duration="2500000" />
       <workItem from="1579641474695" duration="842000" />
-      <workItem from="1579647020771" duration="15259000" />
+      <workItem from="1579647020771" duration="18225000" />
     </task>
     <servers />
   </component>
