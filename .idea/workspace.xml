@@ -4,10 +4,11 @@
     <list default="true" id="798754f6-bb95-4c6d-afad-f06a071ce051" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.path_progress" beforeDir="false" afterPath="$PROJECT_DIR$/.path_progress" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about_classes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/about_classes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about_dice_project.rb" beforeDir="false" afterPath="$PROJECT_DIR$/about_dice_project.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about_open_classes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/about_open_classes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about_scoring_project.rb" beforeDir="false" afterPath="$PROJECT_DIR$/about_scoring_project.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about_class_methods.rb" beforeDir="false" afterPath="$PROJECT_DIR$/about_class_methods.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about_inheritance.rb" beforeDir="false" afterPath="$PROJECT_DIR$/about_inheritance.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about_message_passing.rb" beforeDir="false" afterPath="$PROJECT_DIR$/about_message_passing.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about_modules.rb" beforeDir="false" afterPath="$PROJECT_DIR$/about_modules.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about_scope.rb" beforeDir="false" afterPath="$PROJECT_DIR$/about_scope.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +58,7 @@
       <workItem from="1579641474695" duration="842000" />
       <workItem from="1579647020771" duration="18284000" />
       <workItem from="1580249317140" duration="51000" />
-      <workItem from="1580250399670" duration="7792000" />
+      <workItem from="1580250399670" duration="9637000" />
     </task>
     <servers />
   </component>
