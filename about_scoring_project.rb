@@ -40,6 +40,21 @@ def score(dice)
   total += (dice.count(6) / 3) * 600
   total += (dice.count(5) % 3) * 50
   return total
+  
+  #total = 0
+  #if dice.include?(1)
+  #  total += (dice.count(1) / 3) * 1000
+  #  total += (dice.count(1) % 3) * 100
+  #elsif dice.include?(5)
+  #  total += (dice.count(5) % 3) * 50
+  #else
+  #  total += (dice.count(2) / 3) * 200
+  #  total += (dice.count(3) / 3) * 300
+  #  total += (dice.count(4) / 3) * 400
+  #  total += (dice.count(5) / 3) * 500
+  #  total += (dice.count(6) / 3) * 600
+  #end
+  #return total
 end
 
 class AboutScoringProject < Neo::Koan

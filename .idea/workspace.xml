@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="798754f6-bb95-4c6d-afad-f06a071ce051" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.path_progress" beforeDir="false" afterPath="$PROJECT_DIR$/.path_progress" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about_classes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/about_classes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about_dice_project.rb" beforeDir="false" afterPath="$PROJECT_DIR$/about_dice_project.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about_open_classes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/about_open_classes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about_scoring_project.rb" beforeDir="false" afterPath="$PROJECT_DIR$/about_scoring_project.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,11 +55,19 @@
       <updated>1578904404862</updated>
       <workItem from="1578904406458" duration="2500000" />
       <workItem from="1579641474695" duration="842000" />
-      <workItem from="1579647020771" duration="18225000" />
+      <workItem from="1579647020771" duration="18284000" />
+      <workItem from="1580249317140" duration="51000" />
+      <workItem from="1580250399670" duration="7792000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1682" y="-945" width="645" height="472" key="find.popup" timestamp="1580335464547">
+      <screen x="725" y="-1417" width="2560" height="1417" />
+    </state>
+    <state x="1682" y="-945" width="645" height="472" key="find.popup/0.23.1440.877/725.-1417.2560.1417/-1835.-1417.2560.1417@725.-1417.2560.1417" timestamp="1580335464547" />
   </component>
 </project>
