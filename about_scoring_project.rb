@@ -31,30 +31,16 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 
 def score(dice)
   total = 0
+  
   total += (dice.count(1) / 3) * 1000
   total += (dice.count(1) % 3) * 100
-  total += (dice.count(2) / 3) * 200
-  total += (dice.count(3) / 3) * 300
-  total += (dice.count(4) / 3) * 400
-  total += (dice.count(5) / 3) * 500
-  total += (dice.count(6) / 3) * 600
   total += (dice.count(5) % 3) * 50
+
+  (2..6).each do |i|
+    total += (dice.count(i) / 3) * i * 100
+  end
+
   return total
-  
-  #total = 0
-  #if dice.include?(1)
-  #  total += (dice.count(1) / 3) * 1000
-  #  total += (dice.count(1) % 3) * 100
-  #elsif dice.include?(5)
-  #  total += (dice.count(5) % 3) * 50
-  #else
-  #  total += (dice.count(2) / 3) * 200
-  #  total += (dice.count(3) / 3) * 300
-  #  total += (dice.count(4) / 3) * 400
-  #  total += (dice.count(5) / 3) * 500
-  #  total += (dice.count(6) / 3) * 600
-  #end
-  #return total
 end
 
 class AboutScoringProject < Neo::Koan
