@@ -1,13 +1,7 @@
 # Notes
-### Key takeaways from Ruby Koans
+#### Key takeaways from Ruby Koans
 
-Asserts: you can assert booleans or `assert_equal` which should return a boolean. e.g. `assert true` or `assert_equal 2, 1+1`
-
-`.is_a?()` tests the type e.g. `nil.is_a?(Object)`
-
-`assert_match` checks that strings match e.g. `assert_match( |word|, var.message )`
-
-`=~` matches strings against regular expressions and returns nil if not found
+## OOP
 
 Everything in Ruby is an object. You can convert to string using `.to_s`
 Every object has an object ID. Find with `.object_id`
@@ -19,6 +13,23 @@ For most kinds of objects this value is a pointer to a location in memory.
 FixNums follow the pattern `i * 2 + 1`.
 
 `.clone` allows you to clone an object, but it will not be equal to the original object
+
+Identical symbols are a single internal object. Method names and constants become symbols
+
+You can initialise any object with a proxy object.
+The proxy object forwards messages to the target object.
+
+## Asserts
+
+Asserts: you can assert booleans or `assert_equal` which should return a boolean. e.g. `assert true` or `assert_equal 2, 1+1`
+
+`.is_a?()` tests the type e.g. `nil.is_a?(Object)`
+
+`assert_match` checks that strings match e.g. `assert_match( |word|, var.message )`
+
+`=~` matches strings against regular expressions and returns nil if not found
+
+## Arrays
 
 Arrays are indexed from 0 and new values can be appended with `<<` e.g.
 ```
@@ -46,13 +57,27 @@ Parallel assignments allow you to assign variables to items in the array e.g. `f
 Use splat `*` to select multiple variables.
 If there are less variables than items, the items are ignored. If more variables, the variable is equal to nil.
 
+Keys and values are of type array
+
+`.each` iterates over the array
+
+`.map` and `.collect` transforms elements of an array
+
+`.select` allows you to select certain items from an array
+
+`.find` locates the first element matching a criteria
+
+`<<` appends to an array
+
+#### Question: why does `array.to_s` end up with spaces?
+
+## Hashes
+
 `.fetch` allows you to extract an item from a hash.
 Returns an array with the values for the associated keys.
 Raises `KeyError` if key not found.
 
 Hashes are unordered
-
-Keys and values are of type array
 
 `.merge()` merges new hash values into an existing hash
 
@@ -63,6 +88,8 @@ hash = Hash.new([])
 hash[:one] << "uno"
 ```
 Default values can also be added with blocks `hash = Hash.new { |hash, key| hash[key] = [] }`
+
+## Strings
 
 Double quotes allow for string interpolation.
 Although you can use backslash `\` for hard cases and `%{flexible quotes}, %!...!, %(...)`
@@ -80,15 +107,52 @@ However, the shovel operator is recursive `new << two` will also produce `string
 
 `?a` => ASCII character code for `a`
 
-`?` following a method name indicates a boolean
-
 Get a substring from a string using `string [7,3]` (start from 7th, take 3), `string[7..9]` start from 7th, include 9th
 
 `string.split` will split on spaces unless a character is passed in e.g. `(|:|)`, strings can also be joined
 
-Identical symbols are a single internal object. Method names and constants become symbols
+## Methods
+
+`?` following a method name indicates a boolean
+
+#### Question: explicit return overrides? non-return values?
+#### Question: private methods and receivers?
+
+`.self` refers to the class, so you can create a class level method
+
+You can assign a default value to an argument in a method e.g.
+```
+def method(argument = "default")
+    puts "#{argument}"
+end
+```
+
+If you use the wrong number of arguments, an error will be called
+
+#### Question: can you have optional arguments?
+
+An explicit return overrides final line.
+Avoid multiple explicit returns.
+
+Use `attr...` to access/read/write methods in or outside of `private`
+
+Keyword arguments always have a default value, making them optional to the caller.
+
+Methods can take blocks or do/end methods can call yield many times
+
+`block_given?` tests presence of block
+
+Blocks can modify variables
+
+Blocks can be assigned to variables and called explicitly
+
+#### Question: sandwich code...?
+
+## Symbols
 
 Symbols with spaces and interpolation can be built, but they cannot be concatenated and do not have string methods
+
+## Regex
 
 A pattern is a regular expression
 
@@ -121,76 +185,20 @@ variables (e.g. `$1, $2`) can be used to access captures,
 `.sub` is like find and replace,
 `.gsub` is like find and replace all
 
-#### Question: explicit return overrides? non-return values?
-#### Question: private methods and receivers?
-
-`.self` refers to the class, so you can create a class level method
-
-You can assign a default value to an argument in a method e.g.
-```
-def method(argument = "default")
-    puts "#{argument}"
-end
-```
-
-If you use the wrong number of arguments, an error will be called
-
-#### Question: can you have optional arguments?
-
-An explicit return overrides final line.
-Avoid multiple explicit returns.
-
-Use `attr...` to access/read/write methods in or outside of `private`
-
-Keyword arguments always have a default value, making them optional to the caller.
+## Constants
 
 Top level constants are referenced by double colons.
 Nested constants can be referenced by relative path or complete path.
 `::C` => top level constant
 `C` or `::AboutConstants::C` => nested constants
 
+## Classes
+
 Subclasses inherit from parent classes.
 Nested classes inherit from enclosing classes.
 Lexical scope has precedence over inheritance.
 
-`<<` appends to an array
-
-Everything except nil and false evaluates to true. e.g. `1`, `[]`, `"""`, `{}`, `0`, etc...
-
-#### Question: What does `a == b == c` mean? Why does it have to be `a == b && b == c`
-#### Question: What does inject do?
-
-`.each` iterates over the array
-
-`.map` and `.collect` transforms elements of an array
-
-`.select` allows you to select certain items from an array
-
-`.find` locates the first element matching a criteria
-
-Methods can take blocks or do/end methods can call yield many times
-
-`block_given?` tests presence of block
-
-Blocks can modify variables
-
-Blocks can be assigned to variables and called explicitly
-
-#### Question: sandwich code...?
-
-`file.gets` retrieves a line from a file
-`file.close` closes files
-`file = open(file_name)` opens a file
-
-#### Question: why does `array.to_s` end up with spaces?
 #### Question: when is a class not an open class?
-
-For loops are not common in Ruby. Use `.each` instead.
-```
-(2..6).each do |i|
-    total += (dice.count(i) / 3) * i * 100
-end
-```
 
 Instances of classes are created with new e.g. `fido = Dog.new`
 Set instances variables by assigning to them. e.g.
@@ -225,5 +233,24 @@ Class statements return the value of their last expression
 
 `self.method` is a class level method
 
-You can initialise any object with a proxy object.
-The proxy object forwards messages to the target object.
+## Booleans
+
+Everything except nil and false evaluates to true. e.g. `1`, `[]`, `"""`, `{}`, `0`, etc...
+
+#### Question: What does `a == b == c` mean? Why does it have to be `a == b && b == c`
+#### Question: What does inject do?
+
+## Files
+
+`file.gets` retrieves a line from a file
+`file.close` closes files
+`file = open(file_name)` opens a file
+
+## Loops
+
+For loops are not common in Ruby. Use `.each` instead.
+```
+(2..6).each do |i|
+    total += (dice.count(i) / 3) * i * 100
+end
+```
